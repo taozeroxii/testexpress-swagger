@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: API Document โรงพยาบาลเจ้าพระยาอภัยภูเบศรทดสอบ
+  description:  ทดสอบ Api ของโรงพยาบาลที่่รันอยู่
+  version: 0.0.1
+servers:
+  - url: http://172.16.0.251:3004
+    description: dev IsOnline (Pher Plus)
+  - url: http://172.16.0.251:3009
+    description: Prod ทดสอบรายการที่ 2
+paths:
+  /:
+    get:
+      tags:
+        - IsOnline (Pher Plus) 
+      summary: Successful apistatus
+      description: ข้อมูลการรัน api IsOnline
+      responses:
+        "200": # status code
+          description: รายการสถานะและเลขเวอร์ชั่น ISonline
+          content:
+            application/json:
+              schema:
+                type: array
+  /his/alive:
+     get:
+      tags:
+        - IsOnline (Pher Plus)  
+      summary: Successful 
+      description: hisProvider api IsOnline
+      responses:
+        "200": # status code
+           description: รายการสถานะและเลขเวอร์ชั่น ISonline
+           content:
+            application/json:
+              schema:
+                type: array
